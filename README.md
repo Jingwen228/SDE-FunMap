@@ -1,10 +1,3 @@
-#  Environment and Dependencies
-- R version: 3.6.3
-- Core dependencies:
-  - PSM
-  - deSolve
-  - mvtnorm
-
 SDE-FunMap is a model for mapping quantitative trait loci (QTLs) underlying complex traits based on stochastic differential equations (SDE). With hypothesis testing, this model can identify biologically significant QTLs associated with primary root growth that cannot be detected by deterministic models.
 
 the main progress is as follows:
@@ -19,3 +12,10 @@ dat <- f.load(geno="Map-Genotype.csv",pheno1="height1.csv",time="Taproot-Height-
 
 ret.H0 <-fun.H0(dat)
 ret.H1 <- test(dat,interval=c(1,5),Time)
+
+#  Environment and Dependencies
+- R version: 3.6.3
+- Core dependencies:
+  - PSM
+  - deSolve
+  - mvtnorm
